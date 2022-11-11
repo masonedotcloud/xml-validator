@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xml e Verifica</title>
+    <link rel="icon" href="static/site/favicon.png" type="image/gif" sizes="16x16">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="static/js/init.js"></script>
+</head>
+
+<body style="max-height: 100vh;">
+    <main clas="d-flex flex-row">
+        <div class="d-flex flex-column flex-sm-row">
+            <div id="upload-xml" class="border d-flex flex-column w-100">
+                <p class="p-3 pb-0">XML</p>
+                <div class="input-group p-1 pt-0">
+                    <input type="file" class="form-control" id="file-xml">
+                </div>
+                <div class="p-1 d-flex flex-column flex-sm-row">
+                    <button type="button" class="btn btn-primary w-100 mb-1 mb-sm-0 me-0 me-sm-1"
+                        onclick="ValidateXML();">Valida</button>
+                    <button type="button" class="btn btn-danger w-100 ms-0 ms-sm-1"
+                        onclick="InputReset('xml');">Rimuovi</button>
+                </div>
+            </div>
+            <div id="upload-verify" class="border d-flex flex-column w-100">
+                <p class="p-3 pb-0">XSD/DTD</p>
+                <div class="input-group p-1 pt-0">
+                    <input type="file" class="form-control" id="file-verify">
+                </div>
+                <div class="d-flex p-1">
+                    <button type="button" class="btn btn-danger w-100" onclick="InputReset('verify');">Rimuovi</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row">
+            <div id="codice-xml" class="border overflow-auto d-flex flex-column w-100" style="max-height: 75vh;"></div>
+            <div id="codice-verify" class="border overflow-auto d-flex flex-column w-100" style="max-height: 75vh;">
+            </div>
+        </div>
+    </main>
+    <script src="static/js/reset.js"></script>
+    <script src="static/js/upload.js"></script>
+    <script src="static/js/validate.js"></script>
+</body>
+
+</html>
