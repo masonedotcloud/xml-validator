@@ -54,11 +54,20 @@ try {
         //creazione di un codice xml che comprenda la verifica dtd
         $dtd = file_get_contents($_SESSION['file-verify']);
         $total_xml = file_get_contents($_SESSION['file-xml']);
-        $raw_xml = new DOMDocument();
-        $raw_xml->loadXML($total_xml);
-        $clear_xml = $raw_xml->saveXML($raw_xml->documentElement);
-        $xml = $dtd . $clear_xml;
-    
+
+        $name = simplexml_load_string($total_xml);
+
+
+        $customXML = new SimpleXMLElement($total_xml);
+        $dom = dom_import_simplexml($customXML);
+
+
+        $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+        $xml .= "<!DOCTYPE " . $name->getName() . " [\n";
+        $xml .= $dtd . "]>\n";
+        $xml .= $dom->ownerDocument->saveXML($dom->ownerDocument->documentElement);
+
+
         //analisi del singolo file con controllo dtd e codice xml
         $dom = new DOMDocument;
         $dom->LoadXML($xml);
