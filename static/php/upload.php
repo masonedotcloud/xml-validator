@@ -25,11 +25,9 @@ try {
 //blocco di upload del file dalla zona temporanea alla zona privata dell utente
 try {
     //controllo se la cartella dell'utente esiste oppure va creata
-    if ($_FILES['file']['name'] != '') {
-        $cartella = "uploads/" . md5(strval(get_client_ip())) . "/";
-        if (!folder_exist($cartella)) {
-            mkdir($cartella, 0777);
-        }
+    $cartella = "../../uploads/" . md5(strval(get_client_ip())) . "/";
+    if (!folder_exist($cartella)) {
+        mkdir($cartella, 0777, true);
     }
     //dati del file caricato
     $nome_completo = explode('.', $_FILES['file']['name']);

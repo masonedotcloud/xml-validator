@@ -13,7 +13,7 @@ if (isset($_GET['xml'])) {
     try {
         //ricerca ed eliminazione se presente
         session_start();
-        $cartella = "uploads/" . md5(strval(get_client_ip())) . "/";
+        $cartella = "../../uploads/" . md5(strval(get_client_ip())) . "/";
         if (folder_exist($cartella)) {
             if (file_exists($cartella . 'file.xml')) {
                 unlink($cartella . 'file.xml');
@@ -41,9 +41,8 @@ if (isset($_GET['verify'])) {
     try {
         //ricerca ed eliminazione se presente
         session_start();
-        $cartella = "uploads/" . md5(strval(get_client_ip())) . "/";
+        $cartella = "../../uploads/" . md5(strval(get_client_ip())) . "/";
         if (folder_exist($cartella)) {
-           
             if (file_exists($cartella . 'file.xsd')) {
                 unlink($cartella . 'file.xsd');
             }
@@ -74,7 +73,7 @@ try {
     unset($_SESSION['file-verify']);
 
     //cartella univoca utente
-    $cartella = "uploads/" . md5(strval(get_client_ip())) . "/";
+    $cartella = "../../uploads/" . md5(strval(get_client_ip())) . "/";
 
     //controllo esistenza e presa dei file all'interno
     if (folder_exist($cartella)) {
