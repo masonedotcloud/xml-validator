@@ -25,16 +25,11 @@
 
 Non è richiesta alcuna configurazione aggiuntiva per utilizzare l'applicazione XML Validator. Tuttavia, è possibile personalizzare l'aspetto e il comportamento dell'applicazione modificando i file HTML, CSS e JavaScript presenti nel progetto.
 
-## Contributi
-
-Se desideri contribuire, segui questi passaggi:
-
-1. Fork del repository.
-2. Crea un branch per la tua modifica (`git checkout -b feature/nuova-funzionalita`).
-3. Esegui il commit delle tue modifiche (`git commit -m 'Aggiungi nuova funzionalità'`).
-4. Pusha il tuo branch (`git push origin feature/nuova-funzionalita`).
-5. Apri una richiesta pull nel repository originale.
-
 ## Licenza
 
-Questo progetto è concesso in licenza ai sensi dei termini della licenza MIT.
+Questo progetto è distribuito sotto la Licenza MIT - vedi il file [LICENSE](LICENSE) per ulteriori dettagli.
+
+
+## Autore
+
+Questo progetto è stato creato da [alessandromasone](https://github.com/alessandromasone).
